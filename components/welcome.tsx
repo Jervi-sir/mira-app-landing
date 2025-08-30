@@ -1,4 +1,5 @@
 import { Bowlby_One, Geist_Mono } from 'next/font/google';
+import Image from 'next/image';
 import React from 'react';
 
 const bowlbyOne = Bowlby_One({
@@ -27,7 +28,7 @@ export const WelcomeSection = () => {
             <h1 className={`${bowlbyOne.className} text-center text-4xl md:text-9xl font-extrabold tracking-tight`}>Welcome!</h1>
             <p className={`${geistMono.className} mt-2 text-center text-xl md:text-3xl font-bold`}>Mira Pet Services</p>
             <div className="mt-6 flex justify-center">
-              <img src="mira_logo.svg" className="h-30 w-30" />
+              <Image src="mira_logo.svg" className="h-30 w-30" alt='Mira Pet App Algeria' />
             </div>
           </div>
         </div>

@@ -8,7 +8,7 @@ export const RoadmapSection = () => {
       <section className="container mx-auto px-4 py-12 md:py-20">
         <header className="mb-8 text-center">
           <h3 className="text-2xl md:text-3xl font-semibold">Roadmap highlights</h3>
-          <p className="mt-2 text-muted-foreground">What we're shipping next</p>
+          <p className="mt-2 text-muted-foreground">What we&apos;re shipping next</p>
         </header>
         <div className="grid gap-6 md:grid-cols-4">
           <RoadmapCard icon={<MessageSquare className="size-5" />} title="In‑app chat & media" desc="Share photos, audio, and docs in conversation." />

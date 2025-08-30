@@ -40,14 +40,18 @@ export const RegistryFormSection = () => {
         body: JSON.stringify(form),
       });
       if (!res.ok) {
-        const data = await res.json().catch(() => ({}));
+        const data = (await res.json().catch(() => ({}))) as { error?: string };
         throw new Error(data.error || "Failed to submit");
       }
+
       setForm({ email: "", phone: "", wilaya: "", city: "", role: "person", notes: "" });
-      // swap with a toast if you have one
       alert("Thanks! We'll notify you at " + form.email);
-    } catch (err: any) {
-      alert(err.message || "Something went wrong");
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        alert(err.message);
+      } else {
+        alert("Something went wrong");
+      }
     } finally {
       setLoading(false);
     }

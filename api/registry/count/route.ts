@@ -6,7 +6,7 @@ import { sql } from "drizzle-orm";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-export async function GET(request: Request) {
+export async function GET() {
   try {
     const [{ count }] = await db
       .select({ count: sql<number>`count(*)` })

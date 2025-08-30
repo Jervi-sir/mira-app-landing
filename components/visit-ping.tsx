@@ -1,10 +1,9 @@
 "use client";
 import { useEffect } from "react";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 export default function VisitPing() {
   const pathname = usePathname();
-  const search = useSearchParams();
 
   useEffect(() => {
     const ua = navigator.userAgent;
@@ -33,7 +32,7 @@ export default function VisitPing() {
         keepalive: true,
       }).catch(() => {});
     }
-  }, [pathname, search]);
+  }, [pathname]);
 
   return null;
 }

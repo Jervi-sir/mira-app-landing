@@ -2,7 +2,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { motion } from "framer-motion";
 import { Badge } from '@/components/ui/badge';
-import { CalendarClock, PawPrint, UploadCloud } from 'lucide-react';
+import { CalendarClock, PawPrint } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';

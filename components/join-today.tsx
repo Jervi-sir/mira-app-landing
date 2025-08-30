@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { CalendarClock, Lock, Smartphone } from "lucide-react";
+import Image from "next/image";
 
 type JoinTodayProps = {
   iosHref?: string;                 // e.g. App Store URL
@@ -90,7 +91,7 @@ function StoreBadge({
         comingSoon ? "cursor-not-allowed opacity-60" : "",
       ].join(" ")}
     >
-      <img src={imgSrc} alt={alt} className="h-12" />
+      <Image src={imgSrc} alt={alt} className="h-12" />
     </span>
   );
 

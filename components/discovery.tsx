@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 type DiscoverySectionProps = {
@@ -42,7 +43,7 @@ export const DiscoverySection: React.FC<DiscoverySectionProps> = ({
         <div className="mt-10 grid gap-8 md:grid-cols-2 md:items-center">
           {/* Media */}
           <div className="relative aspect-[4/2] w-full overflow-hidden rounded-2xl bg-white/5 ring-1 ring-white/10">
-            <img
+            <Image
               src={imageSrc}
               alt={imageAlt}
               loading="lazy"
