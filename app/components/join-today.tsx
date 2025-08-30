@@ -91,7 +91,7 @@ function StoreBadge({
         comingSoon ? "cursor-not-allowed opacity-60" : "",
       ].join(" ")}
     >
-      <Image src={imgSrc} alt={alt} className="h-12" />
+      <img src={imgSrc} alt={alt} className="h-12" />
     </span>
   );
 

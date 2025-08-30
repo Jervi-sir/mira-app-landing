@@ -28,7 +28,7 @@ export const WelcomeSection = () => {
             <h1 className={`${bowlbyOne.className} text-center text-4xl md:text-9xl font-extrabold tracking-tight`}>Welcome!</h1>
             <p className={`${geistMono.className} mt-2 text-center text-xl md:text-3xl font-bold`}>Mira Pet Services</p>
             <div className="mt-6 flex justify-center">
-              <Image src="mira_logo.svg" className="h-30 w-30" alt='Mira Pet App Algeria' />
+              <img src="mira_logo.svg" className="h-30 w-30" alt='Mira Pet App Algeria' />
             </div>
           </div>
         </div>
