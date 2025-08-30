@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://mira-pet-app.com
+
+# Sitemaps
+Sitemap: https://mira-pet-app.com/sitemap.xml
