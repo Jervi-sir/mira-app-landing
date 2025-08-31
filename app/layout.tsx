@@ -63,6 +63,9 @@ export const metadata = {
   alternates: {
     canonical: "https://mira-pet-app.com"
   },
+  verification: {
+    google: "PASTE_THE_TOKEN_FROM_SEARCH_CONSOLE", // 👈
+  },
 };
 
 export default function RootLayout({
