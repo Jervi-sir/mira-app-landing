@@ -13,8 +13,13 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Mira – Pets, Adoption, Vets & Groomers in Algeria | Android & iOS",
-  description: "Mira is Algeria’s focused pet platform. Adopt, buy, sell, or find pets. Lost & found, vets, groomers, shelters. Available in all wilayas. Join now for Android & iOS. Platform d’adoption des animaux",
+
+  // AR → FR → EN in one string (as requested)
+  description:
+    "ميرا هي المنصة المرجعية للحيوانات الأليفة في الجزائر: تبنّي، بيع وشراء، ضائع/مفقود، أطباء بيطريون، تواليتور وملاجئ. متاحة في جميع الولايات. Mira, la plateforme incontournable en Algérie pour les animaux de compagnie : adoption, vente/achat, perdus/trouvés, vétérinaires, toiletteurs, refuges. Disponible dans toutes les wilayas. Mira is the go-to pet platform in Algeria: adopt, buy, sell, or find pets; lost & found, vets, groomers, shelters — available across all wilayas.",
+
   metadataBase: new URL("https://mira-pet-app.com"),
+
   keywords: [
     // English
     "Pet adoption Algeria", "Pets for sale Algeria", "Lost pets Algeria", "Dog adoption Algiers",
@@ -36,40 +41,36 @@ export const metadata = {
 
   openGraph: {
     title: "Mira – Algeria’s Pet Community",
-    description: "Adopt, sell, or find pets. Lost & found, vets, groomers, shelters in Algeria.",
+    // short tri-lingual OG description to keep previews clean
+    description:
+      "ميرا: تبنّي/بيع/مفقود + بياطرة/تواليتور | Mira: adoption/vente/perdus + vétérinaires/toiletteurs | Mira: adopt/buy/lost + vets/groomers.",
     url: "https://mira-pet-app.com",
     siteName: "Mira",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
     locale: "en_DZ",
     type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
     title: "Mira – Pets, Adoption & Services in Algeria",
-    description: "Adopt, sell, rehome pets. Connect with vets & groomers. Available in all wilayas.",
+    description:
+      "AR/FR/EN: تبنّي/vente/adopt • ضائع/perdus/lost • بياطرة/vets/toiletteurs.",
     images: ["/og-image.png"],
   },
+
+  // keep canonical, drop hreflang alternates since there are no /en /fr /ar pages
   alternates: {
-    canonical: "https://mira-pet-app.com",
-    languages: {
-      "en-DZ": "https://mira-pet-app.com/en",
-      "fr-DZ": "https://mira-pet-app.com/fr",
-      "ar-DZ": "https://mira-pet-app.com/ar",
-      "x-dz-DZ": "https://mira-pet-app.com/dz", // 👈 custom hreflang for Darija
-    },
+    canonical: "https://mira-pet-app.com"
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
     </html>
